@@ -1,0 +1,65 @@
+:root {
+	--colorDefault_1: #E750F9;
+	--colorDefault_2: #6F98E5;
+	--gradientDefault: linear-gradient(45deg, var(--colorDefault_1), var(--colorDefault_2));
+
+	--colorHover_1: #9960ED;
+	--colorHover_2: #5B91F6;
+	--gradientHover: linear-gradient(45deg, var(--colorHover_1), var(--colorHover_2));
+
+	--colorPressed_1: #7C2DF1;
+	--colorPressed_2: #337AFE;
+	--gradientPressed: linear-gradient(45deg, var(--colorPressed_1), var(--colorPressed_2));
+
+	--colorDisabled_1: #5A2D60;
+	--colorDisabled_2: #37435A;
+	--gradientDisabled: linear-gradient(45deg, var(--colorDisabled_1), var(--colorDisabled_2));
+
+	--colorFooter_1: #19091A;
+	--colorFooter_2: #111723;
+	--gradientFooter: linear-gradient(45deg, var(--colorFooter_1), var(--colorFooter_2));
+}
+
+* {
+	color: white;
+}
+
+.button {
+	cursor: pointer;
+	--pad: 13px;
+	padding: var(--pad) calc(var(--pad) * 2);
+	z-index: 20;
+	border-radius: 1rem;
+	outline: none;
+	border: none;
+	/* background: var(--gradientDefault); */ /* not worked */
+	background: url('./img/gadientDefault.png');
+	background-size: 100%;
+	transition: .3s;
+}
+
+.button:hover {
+	background: url('./img/gadientHover.png');
+	background-size: 100%;
+}
+
+.button:active {
+	background: url('./img/gadientPressed.png');
+	background-size: 100%;
+}
+
+.button:disabled {
+	background: var(--gradientDisabled);
+	color: gray;
+}
+
+.app {
+	min-height: 100dvh;
+	background-color: black;
+}
+
+.container {
+	width: 1440px;
+	height: 100%;
+	margin: auto;
+}

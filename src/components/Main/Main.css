@@ -1,0 +1,11 @@
+.main {
+	margin-bottom: 120px;
+}
+.main__hero {
+	margin-bottom: 30px;
+}
+.main__hero__title {
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 30px;
+}

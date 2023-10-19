@@ -1,0 +1,19 @@
+.main__hero__navigation {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin: auto;
+	width: fit-content;
+}
+.main__hero__navigation__p {
+	text-align: center;
+	padding: 15px;
+	padding-top: 0;
+	cursor: pointer;
+}
+.main__hero__navigation__p::first-letter {
+	text-transform: uppercase;
+}
+.main__hero__navigation__p_active {
+	color: var(--colorDefault_1);
+	box-shadow: inset 0px -3px var(--colorDefault_1);
+}

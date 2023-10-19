@@ -1,0 +1,40 @@
+.footer {
+	background: var(--gradientFooter);
+	padding: 50px;
+	position: relative;
+}
+.footer__container {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+	grid-gap: 30px;
+}
+.footer__img {
+	width: 30%;
+	margin-bottom: 30px;
+}
+.footer__title {
+	line-height: 25px;
+}
+.box__collumn a {
+	text-decoration-line: none;
+	display: block;
+	margin-bottom: 40px;
+	cursor: pointer;
+	transition: .3s;
+}
+.box__collumn a:hover {
+	color: var(--colorDefault_1);
+}
+.box__social img {
+	width: 35px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.footer__copyright {
+	position: absolute;
+	bottom: 5px;
+	text-align: center;
+	width: 100%;
+	opacity: .4;
+	font-size: 15px;
+}

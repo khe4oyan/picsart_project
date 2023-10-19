@@ -1,0 +1,40 @@
+.header {
+	--height: 80px;
+	height: 80px;
+	height: var(--height);
+	border-bottom: 1px solid rgb(15, 15, 15);
+	display: grid;
+	grid-template-columns: 1fr 1.4fr;
+	margin-bottom: 5rem;
+}
+/* .header__box {} */
+.header__box_1 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.header__logo {
+	height: var(--height);
+	width: 100%;
+	padding: 13px;
+	object-fit: contain;
+}
+.header__navigation {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.header__navigation__p {
+	text-align: center;
+	cursor: pointer;
+	transition: .3s;
+}
+.header__navigation__p:hover {
+	color: var(--colorDefault_1);
+}
+.header__box_2 {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.header__box__signInButton {
+	margin-right: 5rem;
+}
