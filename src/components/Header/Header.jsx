@@ -2,9 +2,12 @@ import React from 'react'
 import './Header.css'
 import streamImg from '../../img/mainLogo.png';
 
-export default function Header({ setModalName }) {
+export default function Header({ setModalName, isLogined, setIsLogined }) {
 	const signUpClick = () => {
 		setModalName('signIn');
+	}
+	const signOutClick = () => {
+		setIsLogined(false);
 	}
 
 	const navigationSectionsNames = [
@@ -28,7 +31,12 @@ export default function Header({ setModalName }) {
 			</div>
 
 			<div className='header__box header__box_2'>
-				<button className='button header__box__signInButton' onClick={signUpClick}>Sign In</button>
+				{
+					isLogined ?
+					<button className='button header__box__signInButton' onClick={signOutClick}>Sign Out</button>
+					:
+					<button className='button header__box__signInButton' onClick={signUpClick}>Sign In</button>
+				}
 			</div>
 		</header>
 	)

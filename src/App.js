@@ -13,16 +13,16 @@ export default function App() {
 	const [modalName, setModalName] = useState(null);
 
 	return (
-		<div className="app">
-			<Header setModalName={setModalName} />
+		<div className={`app ${isLogined && 'app_logined'}`}>
+			<Header setModalName={setModalName} isLogined={isLogined} setIsLogined={setIsLogined}/>
 			<Main />
 			<Footer />
 			
 			{
-				modalName !== '' &&
+				modalName !== null &&
 				<Modal setModalName={setModalName}>
-					{ modalName === 'signIn' && <SignIn /> }
-					{ modalName === 'signUp' && <SignUp /> }
+					{ modalName === 'signIn' && <SignIn setModalName={setModalName} setIsLogined={setIsLogined}/> }
+					{ modalName === 'signUp' && <SignUp setModalName={setModalName}/> }
 				</Modal>
 			}
 		</div>
