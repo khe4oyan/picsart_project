@@ -1,4 +1,3 @@
 # Todo
-- Sign In
-- Sign Up
-- Is Logined validation
+- Sign In Logic
+- Sign Up Logic

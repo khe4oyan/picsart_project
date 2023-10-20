@@ -1,0 +1,71 @@
+.signUp__numberBox {
+	display: grid;
+	grid-template-columns: 1fr 10fr;
+	grid-gap: 10px;
+}
+.signUp__numberBoxPrefix {
+	transform: translateY(33px);
+	width: fit-content;
+}
+.signUp__numberBox__flag {
+	--size: 16px;
+	width: var(--size);
+	height: var(--size);
+	background: linear-gradient(red 33%, 33%,  blue 66%, orange 66%);
+	border-radius: 4px;
+	margin-right: 5px;
+}
+.signUp__numberBox__prefixNumber {
+	color: rgb(189, 189, 189);
+}
+
+.signUp__agreeUpdates {
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+}
+.signUp__agreeUpdates__checkbox {
+	--size: 18px;
+	width: var(--size);
+	height: var(--size);
+	border: 1px solid gray;
+}
+.signUp__agreeUpdates__checkbox_checked {
+	position: relative;
+}
+.signUp__agreeUpdates__checkbox_checked::before, 
+.signUp__agreeUpdates__checkbox_checked::after {
+	content: '';
+	background-color: white;
+	width: 1px;
+}
+
+.signUp__agreeUpdates__checkbox_checked::before {
+	height: 8px;
+	transform: translateX(2px) rotate(45deg) ;
+}
+.signUp__agreeUpdates__checkbox_checked::after {
+	height: 4px;
+	transform: translate(-3px, 1px) rotate(-45deg) ;
+}
+.signUp__agreeUpdates__text {
+	font-size: 14px;
+	padding-left: 15px;
+	color: rgb(163, 163, 163);
+}
+
+.signUp__button {
+	width: 100%;
+	padding: 15px;
+	margin-top: 30px;
+}
+.signUp__underLink {
+	text-align: center;
+	color: rgb(172, 172, 172);
+	margin-top: 10px;
+}
+.signUp__underLink span {
+	cursor: pointer;
+	color: var(--colorDefault_1);
+	text-decoration: underline;
+}

@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Modal.css'
 
 export default function Modal({ children, setModalName }) {
 	const closeModal = () => {
 		setModalName(null);
 	}
+
+	useEffect(() => {
+		const keyDownLisener = (e) => {
+			if (e.key === 'Escape') {
+				closeModal();
+			}
+		}
+
+		document.addEventListener('keydown', keyDownLisener);
+
+		return () => { document.removeEventListener('keydown', keyDownLisener); }
+	}, []);
 
 	return (
 		<div className='modal center'>

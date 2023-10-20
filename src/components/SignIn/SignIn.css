@@ -1,9 +1,4 @@
-.signIn {}
-.signIn__title {
-	text-align: center;
-	margin-bottom: 20px;
-	font-size: 2rem;
-}
+/* .signIn {} */
 .signIn__button {
 	margin-top: 3.5rem;
 	width: 100%;
@@ -18,4 +13,5 @@
 .signIn__signUpLink span{
 	color: var(--colorDefault_1);
 	text-decoration: underline;
+	cursor: pointer;
 }

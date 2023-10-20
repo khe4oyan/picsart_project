@@ -15,7 +15,8 @@
 	transform: translate(0px, 0px);
 }
 
-.customInput__input {
+.customInput__input,
+.customInput__input[type="number"] {
 	width: 100%;
 	height: 50px;
 	padding: 10px;

@@ -29,6 +29,7 @@ export default function CustomInput({ value, setValue, placeholder, inputType='t
 				onFocus={() => { focusToggle(true) }}
 				onBlur={() => { focusToggle(false) }}
 				onChange={(e) => { setValue(e.target.value) }}
+				required={true}
 			/>
 			{
 				inputType === 'password' &&

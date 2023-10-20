@@ -16,7 +16,7 @@ export default function SignIn({setModalName, setIsLogined}) {
 
 	return (
 		<div className='signIn'>
-			<h2 className='signIn__title'>Sign In</h2>
+			<h2 className='modal__title'>Sign In</h2>
 			<CustomInput
 				value={login}
 				setValue={setLogin}
