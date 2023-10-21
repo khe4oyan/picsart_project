@@ -69,3 +69,6 @@
 	color: var(--colorDefault_1);
 	text-decoration: underline;
 }
+.signUp__passwordBox {
+	position: relative;
+}
