@@ -33,8 +33,8 @@
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
-	background: url('./img/eye.png') center center / cover;
+	background: url('./img/eye.png') center center / 70% no-repeat;
 }
 .customInput__password_eye_2 {
-	background: url('./img/eye2.png') center center / cover;
+	background: url('./img/eye2.png') center center / 70% no-repeat;
 }

@@ -14,7 +14,7 @@ export default function SignIn({setModalName, setIsLogined}) {
 			setIsLogined(true);
 		}
 	}
-
+	
 	return (
 		<div className='signIn'>
 			<h2 className='modal__title'>Sign In</h2>
