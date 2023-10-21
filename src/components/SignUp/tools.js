@@ -20,7 +20,7 @@ const tools = {
 
 	hasNumber(str) {
 		for (let i = 0; i < str.length; ++i) {
-			if (Number.isInteger(str[i])) {
+			if (Number.isInteger(+str[i])) {
 				return true;
 			}
 		}
@@ -28,7 +28,7 @@ const tools = {
 
 	hasUppercase(str) {
 		for (let i = 0; i < str.length; ++i) {
-			const asciiCode = str[i].charCodeAt(i);
+			const asciiCode = str[i].charCodeAt(0);
 			if (asciiCode > 64 && asciiCode < 91) {
 				return true;
 			}
@@ -37,7 +37,7 @@ const tools = {
 
 	hasLowercase(str) {
 		for (let i = 0; i < str.length; ++i) {
-			const asciiCode = str[i].charCodeAt(i);
+			const asciiCode = str[i].charCodeAt(0);
 			if (asciiCode > 96 && asciiCode < 123) {
 				return true;
 			}
