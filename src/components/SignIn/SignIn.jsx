@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './SignIn.css'
 import CustomInput from '../CustomInput/CustomInput'
+import fakeDB from './fakeDB';
 
 export default function SignIn({setModalName, setIsLogined}) {
 	const [login, setLogin] = useState('');
@@ -8,7 +9,7 @@ export default function SignIn({setModalName, setIsLogined}) {
 
 	const sendToServer = () => {
 		// fake server function
-		if (login === 'pics_acad' && pass === 'lab') {
+		if (fakeDB[login] === pass) {
 			setModalName(null);
 			setIsLogined(true);
 		}
