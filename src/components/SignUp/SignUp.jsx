@@ -1,16 +1,21 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './SignUp.css'
 import CustomInput from '../CustomInput/CustomInput'
 import PassChecker from '../PassChecker/PassChecker';
-
+import tools from './tools';
 
 export default function SignUp({ setModalName }) {
 	const [fullName, setFullName] = useState('');
 	const [email, setEmail] = useState('');
 	const [number, setNumber] = useState('');
 	const [pass, setPass] = useState('');
+	const [passValidStatus, setPassValidStatus] = useState(tools.isValidPass(pass));
 	const [confPass, setConfPass] = useState('');
 	const [agreeUpdate, setAgreeUpdate] = useState(false);
+
+	useEffect(() => {
+		setPassValidStatus(tools.isValidPass(pass));
+	}, [pass]);
 
 	return (
 		<div className='signUp'>
@@ -20,7 +25,7 @@ export default function SignUp({ setModalName }) {
 				setValue={setFullName}
 				placeholder='Full name'
 			/>
-			
+
 			<CustomInput
 				value={email}
 				setValue={setEmail}
@@ -43,7 +48,7 @@ export default function SignUp({ setModalName }) {
 			</div>
 
 			<div className='signUp__passwordBox'>
-				<PassChecker statuses={[0,0,1,1]} />
+				<PassChecker statuses={passValidStatus} />
 				<CustomInput
 					value={pass}
 					setValue={setPass}
