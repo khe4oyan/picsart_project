@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/picsart_project/static/css/main.a37e2d4b.css",
+    "main.js": "/picsart_project/static/js/main.d2c0d1da.js",
+    "static/media/mainLogo.png": "/picsart_project/static/media/mainLogo.7cac04f90ad9c49f098e.png",
+    "index.html": "/picsart_project/index.html",
+    "main.a37e2d4b.css.map": "/picsart_project/static/css/main.a37e2d4b.css.map",
+    "main.d2c0d1da.js.map": "/picsart_project/static/js/main.d2c0d1da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a37e2d4b.css",
+    "static/js/main.d2c0d1da.js"
+  ]
+}
