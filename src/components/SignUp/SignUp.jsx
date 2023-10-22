@@ -9,13 +9,35 @@ export default function SignUp({ setModalName }) {
 	const [email, setEmail] = useState('');
 	const [number, setNumber] = useState('');
 	const [pass, setPass] = useState('');
-	const [passValidStatus, setPassValidStatus] = useState(tools.isValidPass(pass));
+	const [passValidStatus, setPassValidStatus] = useState([]);
 	const [confPass, setConfPass] = useState('');
 	const [agreeUpdate, setAgreeUpdate] = useState(false);
 
 	useEffect(() => {
 		setPassValidStatus(tools.isValidPass(pass));
 	}, [pass]);
+
+	const signUpButton = () => {
+		if (fullName.length < 3) { return; }
+		if (!tools.isEmail(email)) { return; }
+		if (!tools.isPhoneNumber(number)) { return; }
+		if (!tools.isValidPassStatuses(passValidStatus)) { return; }
+		if (pass !== confPass) { return; }
+
+		const data = {
+			fullName, 
+			email,
+			number,
+			pass,
+			agreeUpdate,
+		}
+
+		alert(`send data to server: ${JSON.stringify(data)}`);
+		// fetch('server.am', {
+		// 	method: "POST",
+		// 	body: JSON.stringify(data)
+		// });
+	}
 
 	return (
 		<div className='signUp'>
@@ -68,7 +90,7 @@ export default function SignUp({ setModalName }) {
 				<p className='signUp__agreeUpdates__text'>I agree to receive email updates</p>
 			</div>
 
-			<button className='button signUp__button'>Sign Up</button>
+			<button className='button signUp__button' onClick={signUpButton}>Sign Up</button>
 			<p className='signUp__underLink'>Already have an account ? <span onClick={() => { setModalName('signIn') }}>Sign In</span></p>
 		</div>
 	)
