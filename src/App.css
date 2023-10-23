@@ -23,6 +23,9 @@
 * {
 	color: white;
 }
+body {
+	background-color: black;
+}
 
 .button {
 	cursor: pointer;
@@ -55,7 +58,6 @@
 
 .app {
 	min-height: 100dvh;
-	background-color: black;
 }
 
 .container {
